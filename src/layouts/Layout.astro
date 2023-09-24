@@ -16,6 +16,9 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<GlobalHeader />
@@ -23,21 +26,37 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--background-splash: #156756;
+		--background-primary: #ffff;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
 		background-size: 224px;
+		scroll-behavior: smooth;
+		background: var(--background-primary);
+		font-family: 'Archivo Black', sans-serif;
+		font-family: 'Lora', serif;
+		color: black;
+	}
+	body {
+		margin: 0;
+	}
+	a {
+		color: #ffff;
+		text-decoration: none;
+	}
+	ul {
+		list-style-type: none; 
 	}
 	code {
 		font-family:
