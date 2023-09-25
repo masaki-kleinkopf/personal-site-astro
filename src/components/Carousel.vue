@@ -1,7 +1,7 @@
 <template>
   <div class="embla" ref="emblaNode">
     <div class="embla__container">
-      <div class="embla__slide"><img src="public/livenation-1.webp"></div>
+      <div class="embla__slide"><img src="../images/livenation-1.webp"></div>
       <div class="embla__slide">slide</div>
       <div class="embla__slide">slide</div>
     </div>
