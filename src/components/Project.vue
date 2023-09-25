@@ -1,22 +1,29 @@
 <template>
   <div class="project-container">
     <div class="project-preview">
-      <h3 class="title">Project Title</h3>
+      <h3 class="title">{{ title }}</h3>
       <button class="dropdown-button" @click="handleClick">open dropdown</button>
     </div>
     <div v-show="isDropdown" class='dropdown' :class="isDropdown && 'open'">
+      <p></p>
       <Carousel/>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+
 import Carousel from './Carousel.vue'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+const props = defineProps<{
+  project: any
+}>()
 const isDropdown = ref(false)
 const handleClick = () => {
   isDropdown.value = !isDropdown.value
 }
+const title = computed(() => props.project?.title)
+
 </script>
 
 <style>
@@ -36,6 +43,8 @@ const handleClick = () => {
 .dropdown {
   height: 0;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-evenly;
 }
 .open {
   height: auto;
