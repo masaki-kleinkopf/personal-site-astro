@@ -7,8 +7,10 @@
         <div class="embla__slide">slide</div>
       </div>
     </div>
-    <button @click="scrollPrev">prev</button>
-    <button @click="scrollNext">next</button>
+    <div class="carousel-buttons">
+      <button @click="scrollPrev">previous</button>
+      <button @click="scrollNext">next</button>
+    </div>
   </div>
 </template>
 
@@ -31,7 +33,7 @@ watch(emblaApi, () => {
 })
 </script>
 
-<style>
+<style lang="scss">
 .carousel-container {
   width: 50%;
 }
@@ -51,5 +53,15 @@ img {
   max-width:500px;
   aspect-ratio: auto;
   border-radius: 10px;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: space-between;
+  button {
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
+  }
 }
 </style>

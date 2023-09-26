@@ -1,15 +1,12 @@
 <header class="nav-bar bb">
   <div class="mobile-only">
   </div>
-  <nav aria-label="Main" class="desktop-only">
+  <nav aria-label="Main" class="desktop-only-nav">
+    <a href="/#top" >MK</a>
     <ul class="nav-items">
-      <li>
-        <a href="/#top" >Masaki Kleinkopf</a>
-      </li>
       <li>
         <a href="/#work">Work</a>
       </li>
-
       <li>
         <a href="/#about">About</a>
       </li>
@@ -24,11 +21,29 @@
   </nav>
 </header>
 
-<style>
+<style lang="scss">
+.nav-items {
+  padding-right: 30px;
+  display: flex;
+  gap: 20px;
+}
+.desktop-only-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  border-bottom: solid var(--background-primary);
+  border-width: 6px;
+  a {
+    padding-left: 30px;
+    font-size: 24px;
+  }
+}
 .nav-bar {
+  z-index: 100;
   position: sticky;
   top: 0;
   background: var(--background-splash);
-  height: 100px;
 }
 </style>
