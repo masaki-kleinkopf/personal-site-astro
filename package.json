@@ -14,5 +14,8 @@
     "astro": "^3.1.2",
     "embla-carousel-vue": "8.0.0-rc14",
     "vue": "^3.2.30"
+  },
+  "devDependencies": {
+    "sass": "^1.68.0"
   }
 }
