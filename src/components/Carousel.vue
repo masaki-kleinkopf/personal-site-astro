@@ -8,25 +8,27 @@
       </div>
     </div>
     <button @click="scrollPrev">prev</button>
-    <button @click="handleNextClick">next</button>
+    <button @click="scrollNext">next</button>
   </div>
 </template>
 
 <script setup>
 import emblaCarouselVue from 'embla-carousel-vue'
-import { ref, computed, watchEffect } from 'vue'
+import { ref, computed, watchEffect, watch } from 'vue'
 const [emblaNode, emblaApi] = emblaCarouselVue({loop: true})
 const scrollPrev = () => emblaApi.value?.scrollPrev()
 const scrollNext = () => emblaApi.value?.scrollNext()
 const selectedIndex = ref(emblaApi.value?.selectedScrollSnap())
 const emit = defineEmits(['scrollIndex'])
-
-const handleNextClick = () => {
-  scrollNext()
-  selectedIndex.value = emblaApi.value?.selectedScrollSnap()
-  emit('setScrollIndex', selectedIndex.value)
+const onSelect = () => {
+  console.log("changed")
+  // selectedIndex.value = emblaApi.value?.selectedScrollSnap()
+  emit('setScrollIndex', emblaApi.value?.selectedScrollSnap())
 }
 
+watch(emblaApi, () => {
+  if (emblaApi.value) emblaApi.value.on('select', onSelect)
+})
 </script>
 
 <style>

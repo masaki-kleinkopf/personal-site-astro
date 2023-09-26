@@ -5,8 +5,7 @@
       <button class="dropdown-button" @click="handleClick">open dropdown</button>
     </div>
     <div v-show="isDropdown" class='dropdown' :class="isDropdown && 'open'">
-      <!-- <p>{{project.photos[0].caption}}</p> -->
-      <p>{{ selectedCaption }}</p>
+      <p class="caption">{{ selectedCaption }}</p>
       <Carousel @set-scroll-index="setScrollIndex"/>
     </div>
   </div>
@@ -55,5 +54,8 @@ const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value
 }
 .open {
   height: auto;
+}
+.caption {
+  width: 100%;
 }
 </style>
