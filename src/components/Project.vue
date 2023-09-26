@@ -5,8 +5,9 @@
       <button class="dropdown-button" @click="handleClick">open dropdown</button>
     </div>
     <div v-show="isDropdown" class='dropdown' :class="isDropdown && 'open'">
-      <p></p>
-      <Carousel/>
+      <!-- <p>{{project.photos[0].caption}}</p> -->
+      <p>{{ selectedCaption }}</p>
+      <Carousel @set-scroll-index="setScrollIndex"/>
     </div>
   </div>
 </template>
@@ -23,6 +24,12 @@ const handleClick = () => {
   isDropdown.value = !isDropdown.value
 }
 const title = computed(() => props.project?.title)
+const scrollIndex = ref(0)
+const setScrollIndex = (n : any) => {
+  console.log(n)
+  scrollIndex.value = n
+}
+const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value]?.caption)
 
 </script>
 

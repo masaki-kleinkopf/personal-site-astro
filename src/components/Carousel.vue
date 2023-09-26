@@ -1,19 +1,38 @@
 <template>
-  <div class="embla" ref="emblaNode">
-    <div class="embla__container">
-      <div class="embla__slide"><img src="../images/livenation-1.webp"></div>
-      <div class="embla__slide">slide</div>
-      <div class="embla__slide">slide</div>
+  <div class="carousel-container">
+    <div class="embla" ref="emblaNode">
+      <div class="embla__container">
+        <div class="embla__slide"><img src="../images/livenation-1.webp"></div>
+        <div class="embla__slide"><img src="../images/livenation-2.png"></div>
+        <div class="embla__slide">slide</div>
+      </div>
     </div>
+    <button @click="scrollPrev">prev</button>
+    <button @click="handleNextClick">next</button>
   </div>
 </template>
 
 <script setup>
 import emblaCarouselVue from 'embla-carousel-vue'
-const [emblaNode] = emblaCarouselVue({loop: true})
+import { ref, computed, watchEffect } from 'vue'
+const [emblaNode, emblaApi] = emblaCarouselVue({loop: true})
+const scrollPrev = () => emblaApi.value?.scrollPrev()
+const scrollNext = () => emblaApi.value?.scrollNext()
+const selectedIndex = ref(emblaApi.value?.selectedScrollSnap())
+const emit = defineEmits(['scrollIndex'])
+
+const handleNextClick = () => {
+  scrollNext()
+  selectedIndex.value = emblaApi.value?.selectedScrollSnap()
+  emit('setScrollIndex', selectedIndex.value)
+}
+
 </script>
 
 <style>
+.carousel-container {
+  width: 50%;
+}
 .embla {
     overflow: hidden;
   }
@@ -26,7 +45,9 @@ const [emblaNode] = emblaCarouselVue({loop: true})
 }
 
 img {
-  width:600px;
-  height:400px;
+  max-height:350px;
+  max-width:500px;
+  aspect-ratio: auto;
+  border-radius: 10px;
 }
 </style>

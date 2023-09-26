@@ -16,6 +16,6 @@ import Project from './Project.vue';
 <style>
 .work-container {
   height: 100vh;
-  padding-left: 10vw;
+  padding: 0 10vw;
 }
 </style>
