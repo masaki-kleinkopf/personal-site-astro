@@ -1,10 +1,9 @@
 
 <template>
-  <section id="work" class="work-container">
-    <h2>Work</h2>
-    <!-- <div v-for="project in projectData"  class="project-container"> -->
-      <Project v-for="project in projectData" :project="project"/>
-    <!-- </div> -->
+  <section class="work-container">
+    <a class="anchor" id="work"></a>
+    <h2>Work</h2>      
+    <Project v-for="project in projectData" :project="project"/>
   </section>
 
 </template>
@@ -18,4 +17,6 @@ import Project from './Project.vue';
   height: 100vh;
   padding: 0 10vw;
 }
+
+
 </style>
