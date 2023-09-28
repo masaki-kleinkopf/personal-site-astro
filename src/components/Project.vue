@@ -49,13 +49,14 @@ const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value
 .dropdown {
   height: 0;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: opacity .25s ease-in-out, height .5s ease-in-out;
   display: flex;
   justify-content: space-evenly;
 }
 .open {
   height: 300px;
   opacity: 100;
+  transition: opacity 2s ease-in-out, height 0.5s ease-in-out;
 }
 .caption {
   width: 100%;
