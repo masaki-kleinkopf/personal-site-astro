@@ -45,6 +45,7 @@ const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value
 .project-preview {
   display: flex;
   justify-content: space-between;
+  height: 70px;
 }
 .dropdown {
   height: 0;

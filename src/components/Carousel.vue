@@ -23,8 +23,6 @@ const scrollNext = () => emblaApi.value?.scrollNext()
 const selectedIndex = ref(emblaApi.value?.selectedScrollSnap())
 const emit = defineEmits(['scrollIndex'])
 const onSelect = () => {
-  console.log("changed")
-  // selectedIndex.value = emblaApi.value?.selectedScrollSnap()
   emit('setScrollIndex', emblaApi.value?.selectedScrollSnap())
 }
 
@@ -35,7 +33,7 @@ watch(emblaApi, () => {
 
 <style lang="scss">
 .carousel-container {
-  width: 50%;
+  width: 100%;
 }
 .embla {
     overflow: hidden;
@@ -49,8 +47,8 @@ watch(emblaApi, () => {
 }
 
 img {
-  max-height:350px;
-  max-width:500px;
+  max-height:100%;
+  max-width: 100%;
   aspect-ratio: auto;
   border-radius: 10px;
 }

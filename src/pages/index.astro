@@ -8,7 +8,8 @@ import About from '../components/About.astro'
 <Layout title="Masaki Kleinkopf">
 	<main>
 		<section class="landing-page">
-			<h1 class="main-heading">Masaki Kleinkopf </h1>
+			<h1 class="main-heading foreground">Masaki Kleinkopf </h1>
+			<h1 class="main-heading animation">Masaki Kleinkopf </h1>
 			<h2 class="subheading">
 				Software Developer 
 			</h2>
@@ -36,12 +37,15 @@ import About from '../components/About.astro'
 		font-size: 112px;
 		text-align: left;
 		margin: 0;
-		background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+		position: absolute;
+		/* background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
  		background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
   	background-size: 110px 100%;
   	-webkit-background-clip: text;
-  	background-clip: text;
-  	animation: flick 1.5s infinite;
+  	background-clip: text; */
+  	/* animation: flick 1.5s infinite; */
+		/* position: absolute; */
+  	/* transform: translate(-50%, -50%); */
 	}
 
 	.subheading {
@@ -92,4 +96,45 @@ import About from '../components/About.astro'
 	.landing-page {
 		height: 100vh;
 	}
+
+	.foreground {
+		color: transparent;
+  	-webkit-text-stroke: .2px #ffff;
+	}
+
+	.animation {
+		color: #ffff;
+  	animation: animate 5s ease-in-out infinite;
+	}
+
+	@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
 </style>

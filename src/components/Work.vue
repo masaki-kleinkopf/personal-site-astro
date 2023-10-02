@@ -14,8 +14,11 @@ import Project from './Project.vue';
 </script>
 <style>
 .work-container {
-  height: 100vh;
   padding: 0 10vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 
