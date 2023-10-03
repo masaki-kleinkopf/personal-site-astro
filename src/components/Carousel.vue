@@ -2,8 +2,7 @@
   <div class="carousel-container">
     <div class="embla" ref="emblaNode">
       <div class="embla__container">
-        <div class="embla__slide"><img src="../images/livenation-1.webp"></div>
-        <div class="embla__slide"><img src="../images/livenation-2.png"></div>
+        <div class="embla__slide" v-for="imageData in images">{{ imageData.src }}<img :src="`${imageData.src}`"></div>
         <div class="embla__slide">slide</div>
       </div>
     </div>
@@ -14,9 +13,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import emblaCarouselVue from 'embla-carousel-vue'
 import { ref, computed, watchEffect, watch } from 'vue'
+const props = defineProps<{
+  images: any
+}>()
 const [emblaNode, emblaApi] = emblaCarouselVue({loop: true})
 const scrollPrev = () => emblaApi.value?.scrollPrev()
 const scrollNext = () => emblaApi.value?.scrollNext()
@@ -29,6 +31,7 @@ const onSelect = () => {
 watch(emblaApi, () => {
   if (emblaApi.value) emblaApi.value.on('select', onSelect)
 })
+const images = computed(() => props.images)
 </script>
 
 <style lang="scss">

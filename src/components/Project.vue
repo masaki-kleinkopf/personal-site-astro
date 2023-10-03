@@ -6,7 +6,7 @@
     </div>
     <div class='dropdown' :class="isDropdown && 'open'">
       <p class="caption">{{ selectedCaption }}</p>
-      <Carousel @set-scroll-index="setScrollIndex"/>
+      <Carousel @set-scroll-index="setScrollIndex" :images="images"/>
     </div>
   </div>
 </template>
@@ -25,10 +25,10 @@ const handleClick = () => {
 const title = computed(() => props.project?.title)
 const scrollIndex = ref(0)
 const setScrollIndex = (n : any) => {
-  console.log(n)
   scrollIndex.value = n
 }
 const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value]?.caption)
+const images = computed(() => props.project?.photos)
 
 </script>
 
