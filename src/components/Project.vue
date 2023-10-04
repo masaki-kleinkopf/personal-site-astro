@@ -6,7 +6,8 @@
     </div>
     <div class='dropdown' :class="isDropdown && 'open'">
       <p class="caption">{{ selectedCaption }}</p>
-      <Carousel @set-scroll-index="setScrollIndex" :images="images"/>
+      <!-- <Carousel @set-scroll-index="setScrollIndex" :images="images"/> -->
+      <MasonryGrid :images="images"/>
     </div>
   </div>
 </template>
@@ -14,6 +15,7 @@
 <script setup lang="ts">
 
 import Carousel from './Carousel.vue'
+import MasonryGrid from './MasonryGrid.vue'
 import { ref, computed } from 'vue'
 const props = defineProps<{
   project: any
@@ -48,16 +50,17 @@ const images = computed(() => props.project?.photos)
   height: 70px;
 }
 .dropdown {
-  height: 0;
+  max-height: 0;
   opacity: 0;
-  transition: opacity .25s ease-in-out, height .5s ease-in-out;
+  transition: opacity .25s ease-in-out, max-height .5s ease-in-out;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
 }
 .open {
-  height: 300px;
+  max-height: 3000px;
   opacity: 100;
-  transition: opacity 2s ease-in-out, height 0.5s ease-in-out;
+  transition: opacity 2s ease-in-out, max-height 0.5s ease-in-out;
 }
 .caption {
   width: 100%;
