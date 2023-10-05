@@ -2,7 +2,7 @@
   <div class="masonry-grid">
     <div v-for="imageData in images" class="item">
       <div class="content">
-        <img :src="`${imageData.src}`">
+        <img :src="`${imageData.src}`" :alt="`${imageData.caption}`">
       </div>
     </div>
   </div>
@@ -34,10 +34,8 @@ const resizeAllGridItems = () => {
 }
 
 onMounted(() => {
-  // if (typeof window !== undefined) {
     resizeAllGridItems();
     window.addEventListener("resize", resizeAllGridItems);
-  // }
 })
 </script>
 
