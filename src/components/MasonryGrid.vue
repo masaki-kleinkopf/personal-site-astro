@@ -1,7 +1,7 @@
 <template>
   <div class="masonry-grid">
-    <div v-for="imageData in images" class="item">
-      <div class="content">
+    <div v-for="(imageData, idx) in images" class="item" :key="idx">
+      <div class="content" @click="$emit('imageClick', idx)">
         <img :src="`${imageData.src}`" :alt="`${imageData.caption}`">
       </div>
     </div>
@@ -32,6 +32,8 @@ const resizeAllGridItems = () => {
       resizeGridItem(allItems[i]);
    }
 }
+
+const emit = defineEmits(['imageClick'])
 
 onMounted(() => {
     resizeAllGridItems();

@@ -6,14 +6,15 @@
     </div>
     <div class='dropdown' :class="isDropdown && 'open'">
       <p class="caption">{{ selectedCaption }}</p>
-      <!-- <Carousel @set-scroll-index="setScrollIndex" :images="images"/> -->
-      <MasonryGrid :images="images"/>
+      <MasonryGrid :images="images" @image-click="handleImageClick" />
+      <Carousel v-if="isModal" @set-scroll-index="setScrollIndex" :start-index="scrollIndex" :images="images"/>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 
+import { compileScript } from 'vue/compiler-sfc';
 import Carousel from './Carousel.vue'
 import MasonryGrid from './MasonryGrid.vue'
 import { ref, computed } from 'vue'
@@ -21,8 +22,13 @@ const props = defineProps<{
   project: any
 }>()
 const isDropdown = ref(false)
+const isModal = ref(false)
 const handleClick = () => {
   isDropdown.value = !isDropdown.value
+}
+const handleImageClick = (n: number) => {
+  isModal.value = !isModal.value
+  setScrollIndex(n)  
 }
 const title = computed(() => props.project?.title)
 const scrollIndex = ref(0)

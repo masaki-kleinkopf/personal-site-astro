@@ -1,8 +1,8 @@
 <template>
-  <div class="carousel-container">
+  <div class="carousel-container" >
     <div class="embla" ref="emblaNode">
       <div class="embla__container">
-        <div class="embla__slide" v-for="imageData in images">{{ imageData.src }}<img :src="`${imageData.src}`"></div>
+        <div class="embla__slide" v-for="imageData in images" >{{ imageData.src }}<img :src="`${imageData.src}`"></div>
         <div class="embla__slide">slide</div>
       </div>
     </div>
@@ -17,13 +17,16 @@
 import emblaCarouselVue from 'embla-carousel-vue'
 import { ref, computed, watchEffect, watch } from 'vue'
 const props = defineProps<{
-  images: any
+  images: any,
+  startIndex: any
 }>()
-const [emblaNode, emblaApi] = emblaCarouselVue({loop: true})
+const startIndex = computed(() => {
+  return props.startIndex})
+const [emblaNode, emblaApi] = emblaCarouselVue({loop: true, startIndex: startIndex.value})
 const scrollPrev = () => emblaApi.value?.scrollPrev()
 const scrollNext = () => emblaApi.value?.scrollNext()
 const selectedIndex = ref(emblaApi.value?.selectedScrollSnap())
-const emit = defineEmits(['scrollIndex'])
+const emit = defineEmits(['setScrollIndex'])
 const onSelect = () => {
   emit('setScrollIndex', emblaApi.value?.selectedScrollSnap())
 }
@@ -35,7 +38,26 @@ const images = computed(() => props.images)
 </script>
 
 <style lang="scss">
+
 .carousel-container {
+  
+  width: 100%;
+  margin: auto auto 50px;
+  padding: 10px;
+
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  // @include breakpoint($mobile-width) {
+  //   margin: 0;
+  //   position: fixed;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
   width: 100%;
 }
 .embla {
