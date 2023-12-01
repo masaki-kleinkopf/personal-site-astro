@@ -2,7 +2,7 @@
   <div class="carousel-container" >
     <div class="embla" ref="emblaNode">
       <div class="embla__container">
-        <div class="embla__slide" v-for="imageData in images" >{{ imageData.src }}<img :src="`${imageData.src}`"></div>
+        <div class="embla__slide" v-for="imageData in images" >{{ imageData.src }}<img height="600" :src="`${imageData.src}`"></div>
         <div class="embla__slide">slide</div>
       </div>
     </div>
@@ -46,11 +46,16 @@ const images = computed(() => props.images)
   padding: 10px;
 
   position: relative;
-  background-color: #fefefe;
+
   margin: auto;
   padding: 0;
   width: 90%;
   max-width: 1200px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   // @include breakpoint($mobile-width) {
   //   margin: 0;
   //   position: fixed;
@@ -69,13 +74,12 @@ const images = computed(() => props.images)
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
-  max-height:100%;
-  max-width: 100%;
-  aspect-ratio: auto;
-  border-radius: 10px;
+  object-fit: contain;
 }
 
 .carousel-buttons {
