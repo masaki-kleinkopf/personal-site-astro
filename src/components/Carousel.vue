@@ -1,5 +1,6 @@
 <template>
-  <div class="carousel-container" >
+  <div :class="classes" >
+    <button v-if="isModal" class="close-button" @click="$emit('closeModal')">close</button>
     <div class="embla" ref="emblaNode">
       <div class="embla__container">
         <div class="embla__slide" v-for="imageData in images" >{{ imageData.src }}<img height="600" :src="`${imageData.src}`"></div>
@@ -18,7 +19,8 @@ import emblaCarouselVue from 'embla-carousel-vue'
 import { ref, computed, watchEffect, watch } from 'vue'
 const props = defineProps<{
   images: any,
-  startIndex: any
+  startIndex: any,
+  isModal: Boolean,
 }>()
 const startIndex = computed(() => {
   return props.startIndex})
@@ -26,7 +28,7 @@ const [emblaNode, emblaApi] = emblaCarouselVue({loop: true, startIndex: startInd
 const scrollPrev = () => emblaApi.value?.scrollPrev()
 const scrollNext = () => emblaApi.value?.scrollNext()
 const selectedIndex = ref(emblaApi.value?.selectedScrollSnap())
-const emit = defineEmits(['setScrollIndex'])
+const emit = defineEmits(['setScrollIndex', 'closeModal'])
 const onSelect = () => {
   emit('setScrollIndex', emblaApi.value?.selectedScrollSnap())
 }
@@ -35,6 +37,9 @@ watch(emblaApi, () => {
   if (emblaApi.value) emblaApi.value.on('select', onSelect)
 })
 const images = computed(() => props.images)
+const isModal = computed(() => props.isModal)
+
+const classes = ['carousel-container', isModal && 'modal']
 </script>
 
 <style lang="scss">
@@ -80,15 +85,32 @@ const images = computed(() => props.images)
 
 img {
   object-fit: contain;
+  border-radius: 20px;
 }
 
 .carousel-buttons {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  bottom: 323px;
   button {
     font-size: 18px;
     font-style: italic;
     cursor: pointer;
   }
+}
+
+.modal {
+  img {
+    object-fit: contain;
+    border-radius: 20px;
+    margin-top: 65px;
+  }
+}
+
+.close-button {
+  position: relative;
+  top: 100px;
+  z-index: 2;
 }
 </style>
