@@ -1,8 +1,8 @@
 <template>
-  <div class="project-container">
+  <div class="project-container" @click="handleClick">
     <div class="project-preview">
       <h3 class="title">{{ title }}</h3>
-      <button :class="isDropdown && 'arrow-open'" class="dropdown-button" @click="handleClick">
+      <button :class="isDropdown && 'arrow-open'" class="dropdown-button">
         <svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
           <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
             c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 import { compileScript } from 'vue/compiler-sfc';
 import Carousel from './Carousel.vue'
@@ -30,16 +30,19 @@ const props = defineProps<{
 }>()
 const isDropdown = ref(false)
 const isModal = ref(false)
-const handleClick = () => {
-  isDropdown.value = !isDropdown.value
+const handleClick = (e) => {
+  console.log(e.target.tagName)
+  if (e.target.className !== "close-button" && e.target.tagName !== "IMG") {
+    isDropdown.value = !isDropdown.value
+  }
 }
-const handleImageClick = (n: number) => {
+const handleImageClick = (n) => {
   isModal.value = !isModal.value
   setScrollIndex(n)  
 }
 const title = computed(() => props.project?.title)
 const scrollIndex = ref(0)
-const setScrollIndex = (n : any) => {
+const setScrollIndex = (n) => {
   scrollIndex.value = n
 }
 const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value]?.caption)
