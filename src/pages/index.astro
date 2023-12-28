@@ -53,10 +53,13 @@ import About from '../components/About.astro'
 	}
 	.main-heading {
 		width: 100%;
-		font-size: 112px;
 		text-align: center;
+		font-size: 66px;
 		margin: 0;
 		font-weight: 400;
+		@media only screen and (min-width: 600px) {
+			font-size: 112px;
+		}
 		/* position: absolute; */
 		/* background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
  		background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
