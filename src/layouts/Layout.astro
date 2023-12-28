@@ -25,7 +25,7 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style is:global>
+<style lang="scss" is:global>
 	* {
         margin: 0;
         padding: 0;
@@ -36,14 +36,15 @@ const { title } = Astro.props;
         background: transparent;
     }
 	:root {
-		--background-splash: #156756;
-		--background-primary: #ffff;
+		--background-splash: #e8e5df;
+		--background-primary: black;
+		--accent-orange: #CC5500;
 	}
 	html {
 		font-family: system-ui, sans-serif;
 		background-size: 224px;
 		scroll-behavior: smooth;
-		background: var(--background-primary);
+		background: var(--background-splash);
 		font-family: 'Archivo Black', sans-serif;
 		font-family: 'Lora', serif;
 		color: black;
@@ -52,8 +53,11 @@ const { title } = Astro.props;
 		margin: 0;
 	}
 	a {
-		color: #ffff;
+		color: #black;
 		text-decoration: none;
+		&:hover {
+			color: var(--accent-orange);
+		}
 	}
 	ul {
 		list-style-type: none; 
