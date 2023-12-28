@@ -2,7 +2,7 @@
 <template>
   <section class="work-container">
     <a class="anchor" id="work"></a>
-    <h2 class="work-heading">Work</h2>      
+    <h2 class="section-heading">Work</h2>      
     <Project v-for="project in projectData" :project="project"/>
   </section>
 
