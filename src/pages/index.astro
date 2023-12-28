@@ -8,18 +8,37 @@ import About from '../components/About.astro'
 <Layout title="Masaki Kleinkopf">
 	<main>
 		<section class="landing-page">
-			<h1 class="main-heading foreground">Masaki Kleinkopf </h1>
-			<h1 class="main-heading animation">Masaki Kleinkopf </h1>
+			<h1 class="main-heading">Masaki Kleinkopf </h1>
 			<h2 class="subheading">
 				Software Developer 
 			</h2>
+			<div class="orange-container">
+				<svg width="200px" height="200px" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" role="img">
+					<title>Orange fruit black cartoon image</title>
+					<g>
+					 <path d="m614.4 541.2c0-8.3984-39.602-337.2-51.602-350.4s-85.199-1.1992-102 4.8008c-45.602 16.801-87.602 51.602-87.602 67.199 0 15.602 214.8 278.4 219.6 280.8 16.805 15.598 21.602 6 21.602-2.4023z"/>
+					 <path d="m585.6 556.8c-4.8008-4.8008-232.8-264-248.4-271.2-15.602-7.1992-36 7.1992-67.199 45.602-30 37.199-44.398 68.398-36 86.398 8.3945 18 330 147.6 337.2 151.2 8.4023 3.5977 19.199-7.1992 14.402-12z"/>
+					 <path d="m562.8 580.8c-8.3984-2.3984-343.2-122.4-343.2-122.4-20.398 4.8008-31.199 30-37.199 88.801-6.0039 49.195-2.4023 76.797 9.5977 80.398 12 3.6016 355.2-21.602 368.4-24 12-3.6016 9.6016-20.402 2.4023-22.801z"/>
+					 <path d="m648 540c3.6016-4.8008 139.2-286.8 134.4-309.6-6-22.801-40.801-39.602-88.801-50.398-10.801-2.3984-21.602-3.6016-33.602-3.6016-34.801 0-46.801-10.801-55.199 7.1992s20.398 350.4 21.602 354c1.2031 6.0039 9.6016 21.602 21.602 2.4023z"/>
+					 <path d="m690 595.2c13.199 1.1992 301.2 22.801 314.4 10.801 13.199-12 20.398-62.398 9.6016-110.4-10.801-46.801-32.398-87.602-50.398-87.602-19.203 0-270 154.8-279.6 164.4-10.801 9.6016-7.1992 22.801 6 22.801z"/>
+					 <path d="m558 616.8c-12 1.1992-339.6 39.602-350.4 51.602-10.801 12-6 66 14.398 109.2 21.602 44.398 61.199 68.398 76.801 68.398 15.602 0 262.8-200.4 271.2-207.6 7.1992-6 0-22.797-12-21.598z"/>
+					 <path d="m678 561.6s262.8-154.8 272.4-170.4c8.3984-15.602-15.602-63.602-50.398-98.398-34.801-33.602-72-54-82.801-48-10.801 3.5938-135.6 247.2-153.6 303.59-3.6016 15.602 8.3984 14.402 14.398 13.203z"/>
+					 <path d="m578.4 648c-7.1992 6-265.2 216-265.2 232.8s22.801 45.602 63.602 70.801c38.398 24 43.199 42 80.398 31.199s141.6-318 144-328.8c3.6016-9.6016-15.598-12-22.801-6z"/>
+					 <path d="m704.4 609.6c-45.602-3.6016-31.199 28.801-19.199 38.398 12 9.6016 226.8 165.6 243.6 166.8 18 1.1992 38.398-2.3984 56.398-48 18-46.801 33.602-110.4 16.801-122.4-15.602-13.203-252-31.203-297.6-34.801z"/>
+					 <path d="m602.4 60c-295.2 0-536.4 240-536.4 536.4 0 295.2 240 536.4 536.4 536.4 295.2 0 536.4-240 536.4-536.4 0.003906-296.4-241.2-536.4-536.4-536.4zm0 1044c-246 0-495.6-228-495.6-507.6 0-280.8 226.8-495.6 507.6-495.6 280.8 0 495.6 214.8 495.6 495.6-0.003906 279.6-261.61 507.6-507.61 507.6z"/>
+					 <path d="m649.2 664.8c3.6016 16.801 66 301.2 81.602 313.2 15.602 12 57.602-2.3984 96-26.398 42-26.398 66-50.398 66-76.801 0-26.398-205.2-210-218.4-220.8-12.004-12-28.801-4.8008-25.203 10.801z"/>
+					 <path d="m637.2 672c-4.8008-18-22.801-18-26.398-8.3984-3.6016 9.6016-93.602 292.8-93.602 318 0 25.199 36 33.602 84 33.602 49.199 0 90-21.602 90-37.199 0-15.605-19.199-152.4-19.199-152.4s-30-134.4-34.801-153.6z"/>
+					</g>
+				 </svg>
+
+			</div>
 		</section>
 		<Work client:visible/>
 		<About />
 	</main>
 </Layout>
 
-<style>
+<style lang="scss">
 	main {
 		width: 100%;
 		font-size: 20px;
@@ -28,16 +47,17 @@ import About from '../components/About.astro'
 	}
 	.landing-page {
 		background: var(--gold);
-		padding-left: 10vw;
+		/* padding-left: 10vw; */
 		background: var(--background-splash);
-		color: white;
+		color: black;
 	}
 	.main-heading {
 		width: 100%;
 		font-size: 112px;
-		text-align: left;
+		text-align: center;
 		margin: 0;
-		position: absolute;
+		font-weight: 400;
+		/* position: absolute; */
 		/* background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
  		background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
   	background-size: 110px 100%;
@@ -49,10 +69,9 @@ import About from '../components/About.astro'
 	}
 
 	.subheading {
-		text-align: left;
-		padding-left: 5vw;
-		position: relative;
-		top: 30%;
+		padding-top: 50px;
+		text-align: center;
+		font-size: 36px;
 	}
 	.astro-a {
 		position: absolute;
@@ -104,11 +123,26 @@ import About from '../components/About.astro'
   	-webkit-text-stroke: .2px #ffff;
 	}
 
-	.animation {
-		color: #ffff;
-  	animation: animate 5s ease-in-out infinite;
+	.orange-container {
+		display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;
+		padding-top: 100px
 	}
 
+	.orange-container{
+		path {
+			&:hover {
+				fill: #CC5500;
+			}
+		}
+	}
+
+	/* .animation {
+		color: #ffff;
+  	animation: animate 5s ease-in-out infinite;
+	} */
+/* 
 	@keyframes animate {
   0%,
   100% {
@@ -138,5 +172,5 @@ import About from '../components/About.astro'
       0% 100%
     );
   }
-}
+} */
 </style>
