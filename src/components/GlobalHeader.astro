@@ -2,7 +2,7 @@
   <div class="mobile-only">
   </div>
   <nav aria-label="Main" class="desktop-only-nav">
-    <a href="/#top" >MK</a>
+    <a href="/#top" class="logo" >MK</a>
     <ul class="nav-items">
       <li>
         <a href="/#work">Work</a>
@@ -30,14 +30,22 @@
 .desktop-only-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  height: 60px;
   border-bottom: solid var(--background-primary);
-  border-width: 6px;
   a {
     padding-left: 30px;
     font-size: 24px;
+    &:visited {
+      color: unset;
+    }
+    &:hover {
+      color: #CC5500;
+    }
+  }
+  .logo {
+    color: #CC5500 !important;
   }
 }
 .nav-bar {
