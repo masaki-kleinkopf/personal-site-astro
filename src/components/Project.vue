@@ -25,9 +25,9 @@ import { compileScript } from 'vue/compiler-sfc';
 import Carousel from './Carousel.vue'
 import MasonryGrid from './MasonryGrid.vue'
 import { ref, computed } from 'vue'
-const props = defineProps<{
-  project: any
-}>()
+const props = defineProps({
+  project: Object
+})
 const isDropdown = ref(false)
 const isModal = ref(false)
 const handleClick = (e) => {
