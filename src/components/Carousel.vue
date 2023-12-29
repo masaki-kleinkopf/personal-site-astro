@@ -56,18 +56,10 @@ const classes = ['carousel-container', isModal && 'modal']
   padding: 0;
   width: 90%;
   max-width: 1200px;
-
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // @include breakpoint($mobile-width) {
-  //   margin: 0;
-  //   position: fixed;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  // }
   width: 100%;
 }
 .embla {
