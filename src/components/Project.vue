@@ -14,7 +14,7 @@
     <div class='dropdown' :class="isDropdown && 'open'">
       <p class="caption">{{ selectedCaption }}</p>
       <MasonryGrid :images="images" @image-click="handleImageClick" />
-      <Carousel v-if="isModal" :is-modal="true" @set-scroll-index="setScrollIndex" @close-modal="() => isModal = false" :start-index="scrollIndex" :images="images"/>
+      <!-- <Carousel v-if="isModal" :is-modal="true" @set-scroll-index="setScrollIndex" @close-modal="() => isModal = false" :start-index="scrollIndex" :images="images"/> -->
     </div>
   </div>
 </template>
