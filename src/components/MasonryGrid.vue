@@ -21,8 +21,6 @@ const resizeGridItem = (item:any) => {
    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
    const rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
    item.style.gridRowEnd = "span "+rowSpan;
-   console.log("rowHeight", rowHeight)
-   console.log("rowGap", rowGap)
 }
 
 const resizeAllGridItems = () => {
@@ -45,7 +43,7 @@ onMounted(() => {
 .masonry-grid {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(325px,1fr));
   grid-auto-rows: 0px;
   img {
     width: 100%;
