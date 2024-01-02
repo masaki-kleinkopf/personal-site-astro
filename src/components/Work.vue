@@ -14,7 +14,6 @@ import Project from './Project.vue';
 </script>
 <style lang="scss">
 .work-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   .work-heading {
