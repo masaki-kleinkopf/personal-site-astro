@@ -1,3 +1,7 @@
+---
+import CopyToClipboard from '../components/CopyToClipboard.vue'
+---
+
 <header class="nav-bar bb">
   <div class="mobile-only">
   </div>
@@ -10,22 +14,28 @@
       <li>
         <a href="/#about">About</a>
       </li>
-      <!-- <li>
-        <CopyToClipboard
-          label="hey@bean.la"
-          message-position="below"
-          tooltip="click to copy email"
-        />
-      </li> -->
+      <li>
+        <CopyToClipboard client:load/>
+      </li>
     </ul>
   </nav>
 </header>
+
 
 <style lang="scss">
 .nav-items {
   padding-right: 30px;
   display: flex;
-  gap: 20px;
+  gap: 1rem;
+  font-size: 1.2rem;
+  li {
+    display: flex;
+    align-items: center;
+  }
+  @media only screen and (min-width: 600px) {
+    font-size: 1.5rem;
+    gap: 2rem;
+	}
 }
 .desktop-only-nav {
   display: flex;
@@ -35,8 +45,7 @@
   height: 60px;
   border-bottom: solid var(--background-primary);
   a {
-    padding-left: 30px;
-    font-size: 24px;
+    // font-size: 24px;
     &:visited {
       color: unset;
     }
@@ -46,6 +55,8 @@
   }
   .logo {
     color: var(--accent-orange) !important;
+    padding-left: 1rem;
+    font-size: 1.5rem;
   }
 }
 .nav-bar {
