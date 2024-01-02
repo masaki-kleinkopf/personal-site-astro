@@ -14,15 +14,12 @@
     <div class='dropdown' :class="isDropdown && 'open'">
       <p class="caption">{{ selectedCaption }}</p>
       <MasonryGrid :images="images" @image-click="handleImageClick" />
-      <!-- <Carousel v-if="isModal" :is-modal="true" @set-scroll-index="setScrollIndex" @close-modal="() => isModal = false" :start-index="scrollIndex" :images="images"/> -->
     </div>
   </div>
 </template>
 
 <script setup>
 
-import { compileScript } from 'vue/compiler-sfc';
-import Carousel from './Carousel.vue'
 import MasonryGrid from './MasonryGrid.vue'
 import { ref, computed } from 'vue'
 const props = defineProps({
@@ -77,8 +74,12 @@ const images = computed(() => props.project?.photos)
   transition: opacity .25s ease-in-out, max-height .5s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding: 0 60px;
+  padding: 0 1rem;
+  overflow: hidden;
   /* justify-content: space-evenly; */
+  @media only screen and (min-width: 600px) {
+    padding: 0 3rem;
+	}
 }
 .open {
   max-height: 3000px;
@@ -89,6 +90,9 @@ const images = computed(() => props.project?.photos)
   transform: rotate(0deg);
   transition: transform .25s linear;
   margin-right: 20px;
+  height: max-content;
+  align-self: center;
+
 }
 .arrow-open {
   transform: rotate(90deg);
