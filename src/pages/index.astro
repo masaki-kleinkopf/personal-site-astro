@@ -60,15 +60,6 @@ import About from '../components/About.astro'
 		@media only screen and (min-width: 600px) {
 			font-size: 112px;
 		}
-		/* position: absolute; */
-		/* background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
- 		background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
-  	background-size: 110px 100%;
-  	-webkit-background-clip: text;
-  	background-clip: text; */
-  	/* animation: flick 1.5s infinite; */
-		/* position: absolute; */
-  	/* transform: translate(-50%, -50%); */
 	}
 
 	.subheading {
@@ -128,9 +119,12 @@ import About from '../components/About.astro'
 
 	.orange-container {
 		display: flex;
-    justify-content: flex-end;
-    padding-right: 80px;
-		padding-top: 100px
+		justify-content: center;
+		padding-top: 2rem;
+		@media only screen and (min-width: 600px) {
+			justify-content: flex-end;
+    	padding: 7rem 5rem 0 0;
+		}
 	}
 
 	.orange-container{
@@ -140,40 +134,4 @@ import About from '../components/About.astro'
 			}
 		}
 	}
-
-	/* .animation {
-		color: #ffff;
-  	animation: animate 5s ease-in-out infinite;
-	} */
-/* 
-	@keyframes animate {
-  0%,
-  100% {
-    clip-path: polygon(
-      0% 45%,
-      16% 44%,
-      33% 50%,
-      54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    );
-  }
-
-  50% {
-    clip-path: polygon(
-      0% 60%,
-      15% 65%,
-      34% 66%,
-      51% 62%,
-      67% 50%,
-      84% 45%,
-      100% 46%,
-      100% 100%,
-      0% 100%
-    );
-  }
-} */
 </style>
