@@ -88,7 +88,7 @@ const images = computed(() => props.project?.photos)
 .open {
   max-height: 8000px;
   opacity: 100;
-  transition: opacity 2s ease-in-out, max-height 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out, max-height 1s ease-in-out;
 }
 .dropdown-button {
   transform: rotate(0deg);
