@@ -46,6 +46,7 @@ onMounted(() => {
   grid-template-columns: repeat(auto-fill, minmax(325px,1fr));
   grid-auto-rows: 0px;
   img {
+    border-radius: 1rem;
     width: 100%;
   }
 }
