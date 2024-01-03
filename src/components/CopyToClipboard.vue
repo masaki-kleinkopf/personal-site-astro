@@ -1,19 +1,20 @@
 <template>
   <div class="contact-nav-item" @click="handleClick">
     <button>Contact</button>
-    <span>{{ copyText }}</span>
+    <div><span :class="classes">click to copy email </span></div>
+    <p class="success-text">{{ successText }}</p>
   </div>
 </template>
 
 <script setup>
-import {ref} from "vue"
-const copyText = ref("click to copy email")
+import {ref, computed} from "vue"
+const successText = ref("")
+const classes = computed(() => ['hover-text', successText.value && 'hide'] )
 const handleClick = () => {
   navigator.clipboard.writeText("masaki.kleinkopf@gmail.com").then(
-    copyText.value="email copied",
+    successText.value="email copied",
     setTimeout(() => {
-      copyText.value = ""
-      copyText.value = "click to copy email"
+      successText.value = ""
     }, 2000)
     );
 
@@ -22,19 +23,31 @@ const handleClick = () => {
 
 <style lang="scss">
 .contact-nav-item {
-  span {
+  .hover-text {
     display: none;
     position: absolute;
     right: 1rem;
-    top: 4rem;
+    top: 2.6rem;
+    top: 4.3rem;
     color: var(--accent-orange);
     @media only screen and (min-width: 600px) {
       font-size: 1.2rem;
 	  }
     font-size: 1rem;
   }
+  .success-text {
+    position: absolute;
+    padding-left: 4rem;
+    right: 1rem;
+    top: 4.3rem;
+    font-style: italic;
+    @media only screen and (min-width: 600px) {
+      font-size: 1.2rem;
+	  }
+    font-size: 1rem;
+  }
   &:active {
-    span {
+    hover-text {
       display: block;
     }
   }
@@ -53,6 +66,9 @@ const handleClick = () => {
     &:hover {
       span {
         display: block;
+      }
+      .hide {
+        display: none;
       }
     }
   }
