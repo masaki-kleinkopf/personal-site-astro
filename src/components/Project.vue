@@ -69,10 +69,7 @@ const images = computed(() => props.project?.photos)
     display: flex;
     align-items: center;
     padding-left: 1.25rem;
-    font-size: 1.2rem;
-    @media only screen and (min-width: 600px) {
-      font-size: 1.4rem;
-	  }
+    font-size: 1.4rem;
   }
 }
 .dropdown {
@@ -89,7 +86,7 @@ const images = computed(() => props.project?.photos)
 	}
 }
 .open {
-  max-height: 3000px;
+  max-height: 8000px;
   opacity: 100;
   transition: opacity 2s ease-in-out, max-height 0.5s ease-in-out;
 }
