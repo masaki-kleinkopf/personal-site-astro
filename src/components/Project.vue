@@ -56,16 +56,23 @@ const images = computed(() => props.project?.photos)
 }
 .image {
   height: 200px;
-  width:370px;
+  width: 370px;
 }
 .project-preview {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 5rem;
+  @media only screen and (min-width: 600px) {
+    height: 6.2rem;
+	}
   .title {
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 1.25rem;
+    font-size: 1.2rem;
+    @media only screen and (min-width: 600px) {
+      font-size: 1.4rem;
+	  }
   }
 }
 .dropdown {
@@ -89,10 +96,17 @@ const images = computed(() => props.project?.photos)
 .dropdown-button {
   transform: rotate(0deg);
   transition: transform .25s linear;
-  margin-right: 20px;
-  height: max-content;
-  align-self: center;
-
+  margin: auto 1.25rem auto auto;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  overflow:hidden;
+  svg {
+    height: 25px;
+    @media only screen and (min-width: 600px) {
+      height: 30px;
+	  }
+  }
 }
 .arrow-open {
   transform: rotate(90deg);
