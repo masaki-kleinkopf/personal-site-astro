@@ -47,7 +47,7 @@ const images = computed(() => props.project?.photos)
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-container {
   border-top: solid 1px;
   &:last-child {
