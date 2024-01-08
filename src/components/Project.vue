@@ -1,7 +1,7 @@
 <template>
   <div class="project-container" @click="handleClick">
     <div class="project-preview">
-      <h3 class="title">{{ title }}</h3>
+      <h3 class="title">{{ title }}<span v-if="subTitle">({{ subTitle }})</span></h3>
       <button :class="isDropdown && 'arrow-open'" class="dropdown-button">
         <svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
           <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
@@ -12,7 +12,8 @@
       </button>
     </div>
     <div class='dropdown' :class="isDropdown && 'open'">
-      <p class="caption">{{ selectedCaption }}</p>
+      <p class="description">{{ description }}</p>
+      <p class="tech-stack">Tech Stack: {{ techStack }}</p>
       <MasonryGrid :images="images" @image-click="handleImageClick" />
     </div>
   </div>
@@ -44,6 +45,9 @@ const setScrollIndex = (n) => {
 }
 const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value]?.caption)
 const images = computed(() => props.project?.photos)
+const description = computed(() => props.project?.description)
+const subTitle = computed(() => props.project?.subTitle)
+const techStack = computed(() => props.project?.techStack)
 
 </script>
 
@@ -70,6 +74,11 @@ const images = computed(() => props.project?.photos)
     align-items: center;
     padding-left: 1.25rem;
     font-size: 1.4rem;
+    span {
+      font-size: 1.2rem;
+      padding-left: 1rem;
+      font-style: italic;
+    }
   }
 }
 .dropdown {
@@ -109,7 +118,15 @@ const images = computed(() => props.project?.photos)
   transform: rotate(90deg);
   transition: transform .25s linear;
 }
-.caption {
+.description {
   width: 100%;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.tech-stack {
+  font-size: 1rem;
+  font-style: italic;
+  padding-bottom: 2rem;
 }
 </style>
