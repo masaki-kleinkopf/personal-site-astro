@@ -7,10 +7,10 @@ export const projectData = [
     src:'/images/ln-6.webp',
     caption: 'Home page'
   },
+  {src:'/images/ln-10.webp', caption: 'Lightbox with shareable url'},
   {src:'/images/ln-5.webp', caption: 'Venue page'},
   {src:'/images/ln-4.webp', caption: 'Venue page with social media carousel'},
   {src:'/images/ln-3.webp', caption: 'Gallery grid'},
-  {src:'/images/ln-10.webp', caption: 'Lightbox with shareable url'},
   {src:'/images/ln-7.webp', caption: 'Mobile lightbox'},
   {src:'/images/ln-8.webp', caption: 'Mobile tech pack download'},
 
