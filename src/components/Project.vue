@@ -73,7 +73,7 @@ const techStack = computed(() => props.project?.techStack)
     display: flex;
     align-items: center;
     padding-left: 1.25rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     @media only screen and (min-width: 600px) {
       font-size: 1.4rem;
 	  }
@@ -91,7 +91,7 @@ const techStack = computed(() => props.project?.techStack)
 .dropdown {
   max-height: 0;
   opacity: 0;
-  transition: opacity .25s ease-in-out, max-height .5s ease-in-out;
+  // transition: opacity .25s ease-in-out, max-height .5s ease-in-out;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
@@ -103,7 +103,7 @@ const techStack = computed(() => props.project?.techStack)
 .open {
   max-height: 8000px;
   opacity: 100;
-  transition: opacity 1s ease-in-out, max-height 1s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 .dropdown-button {
   transform: rotate(0deg);
