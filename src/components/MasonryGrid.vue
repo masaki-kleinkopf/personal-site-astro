@@ -53,6 +53,9 @@ onMounted(() => {
     width: 100%;
   }
   @media only screen and (min-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+	}
+  @media only screen and (min-width: 825px) {
     grid-template-columns: repeat(auto-fill, minmax(425px,1fr));
 	}
   .caption {
