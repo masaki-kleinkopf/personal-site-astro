@@ -73,11 +73,18 @@ const techStack = computed(() => props.project?.techStack)
     display: flex;
     align-items: center;
     padding-left: 1.25rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    @media only screen and (min-width: 600px) {
+      font-size: 1.4rem;
+	  }
     span {
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding-left: 1rem;
       font-style: italic;
+      padding-right: 0.1rem;
+      @media only screen and (min-width: 600px) {
+        font-size: 1.2rem;
+	    }
     }
   }
 }
@@ -89,7 +96,6 @@ const techStack = computed(() => props.project?.techStack)
   flex-direction: column;
   padding: 0 1rem;
   overflow: hidden;
-  /* justify-content: space-evenly; */
   @media only screen and (min-width: 600px) {
     padding: 0 3rem;
 	}
