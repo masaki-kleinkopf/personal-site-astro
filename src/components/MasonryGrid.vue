@@ -3,6 +3,7 @@
     <div v-for="(imageData, idx) in images" class="item" :key="idx">
       <div class="content" @click="$emit('imageClick', idx)">
         <img :src="`${imageData.src}`" :alt="`${imageData.caption}`">
+        <p class="caption">{{ imageData.caption }}</p>
       </div>
     </div>
   </div>
@@ -43,6 +44,8 @@ onMounted(() => {
 .masonry-grid {
   display: grid;
   grid-gap: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 6px;
   grid-template-columns: repeat(auto-fill, minmax(325px,1fr));
   grid-auto-rows: 0px;
   img {
@@ -52,5 +55,10 @@ onMounted(() => {
   @media only screen and (min-width: 600px) {
     grid-template-columns: repeat(auto-fill, minmax(425px,1fr));
 	}
+  .caption {
+    font-size: .9rem;
+    font-style: italic;
+    text-align: center;
+  }
 }
 </style>
