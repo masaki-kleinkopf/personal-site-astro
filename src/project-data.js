@@ -18,7 +18,7 @@ export const projectData = [
   },
   {title:"Salon94",
   subTitle: 'Bean.LA',
-  description: 'Developed new features for Salon94\'s site refresh and new home page. Work included syncing Shopify data into SanityCMS for more flexibility, building out corresponding Shop features such as a homepage shop carousel, and rebuilding shop and checkout flow utilizing Shopify Storefront API.',
+  description: 'Developed new features for Salon94\'s site refresh and new home page. Work included syncing Shopify data into SanityCMS for more flexibility, building out corresponding Shop features such as a homepage shop carousel, and rebuilding shop and checkout flow utilizing Shopify Storefront API and Pinia state management.',
   techStack: 'Nuxt3/Vue, Sanity CMS, SCSS, Shopify Storefront',
   photos:[
     {src:'/images/s94-1.webp', caption: 'Home page shop carousel, made possible with Shopify/Sanity integration.'},
