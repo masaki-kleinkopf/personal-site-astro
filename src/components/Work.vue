@@ -6,7 +6,7 @@
     <div>
       <Project v-for="project in projectData" :project="project" />
     </div>      
-    <p class="pdf-info">Download a pdf of my resume <a href="/masaki-kleinkopf-resume.pdf" target="_blank">here</a></p>
+    <p class="pdf-info">Download a pdf version of my <a href="/masaki-kleinkopf-resume.pdf" target="_blank">resume</a></p>
   </section>
 
 </template>
