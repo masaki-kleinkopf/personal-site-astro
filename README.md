@@ -1,1 +1,3 @@
-WIP portfolio built in Astro, Vue, SCSS
+Portfolio built in Astro, Vue, SCSS.
+
+Learning goal was to learn Astro!
