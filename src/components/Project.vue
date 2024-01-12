@@ -2,7 +2,7 @@
   <div class="project-container" @click="handleClick">
     <div class="project-preview">
       <h3 class="title">{{ title }}<span v-if="subTitle">({{ subTitle }})</span></h3>
-      <button :class="isDropdown && 'arrow-open'" class="dropdown-button">
+      <button :class="isDropdown && 'arrow-open'" class="dropdown-button" aria-label="toggle-accordion">
         <svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
           <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
             c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
