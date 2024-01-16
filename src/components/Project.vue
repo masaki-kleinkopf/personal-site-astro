@@ -124,6 +124,7 @@ const techStack = computed(() => props.project?.techStack)
 .arrow-open {
   transform: rotate(90deg);
   transition: transform .25s linear;
+  max-height: 70px;
 }
 .description {
   width: 100%;
