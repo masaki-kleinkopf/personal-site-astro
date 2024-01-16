@@ -66,6 +66,7 @@ const techStack = computed(() => props.project?.techStack)
   display: flex;
   justify-content: space-between;
   height: 5rem;
+  cursor: pointer;
   @media only screen and (min-width: 600px) {
     height: 6.2rem;
 	}
