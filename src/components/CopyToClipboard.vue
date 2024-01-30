@@ -23,6 +23,9 @@ const handleClick = () => {
 
 <style lang="scss">
 .contact-nav-item {
+  button {
+    cursor: pointer;
+  }
   .hover-text {
     display: none;
     position: absolute;
