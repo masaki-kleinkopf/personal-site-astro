@@ -26,7 +26,6 @@ const resizeGridItem = (item:any) => {
 
 const resizeAllGridItems = () => {
    const allItems = document.getElementsByClassName("item");
-   console.log(allItems)
    for (let i=0;i<allItems.length;i++){
       resizeGridItem(allItems[i]);
    }

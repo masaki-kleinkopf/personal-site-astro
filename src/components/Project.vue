@@ -29,7 +29,6 @@ const props = defineProps({
 const isDropdown = ref(false)
 const isModal = ref(false)
 const handleClick = (e) => {
-  console.log(e.target.tagName)
   if (e.target.className !== "close-button" && e.target.tagName !== "IMG") {
     isDropdown.value = !isDropdown.value
   }
