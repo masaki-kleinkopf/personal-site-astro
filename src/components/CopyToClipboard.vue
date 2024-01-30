@@ -8,8 +8,10 @@
 
 <script setup>
 import {ref, computed} from "vue"
+
 const successText = ref("")
 const classes = computed(() => ['hover-text', successText.value && 'hide'] )
+
 const handleClick = () => {
   navigator.clipboard.writeText("masaki.kleinkopf@gmail.com").then(
     successText.value="email copied",
@@ -17,7 +19,6 @@ const handleClick = () => {
       successText.value = ""
     }, 2000)
     );
-
 }
 </script>
 

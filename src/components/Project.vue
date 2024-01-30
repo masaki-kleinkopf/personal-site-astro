@@ -20,14 +20,22 @@
 </template>
 
 <script setup>
-
 import MasonryGrid from './MasonryGrid.vue'
 import { ref, computed } from 'vue'
+
 const props = defineProps({
   project: Object
 })
+
+const title = computed(() => props.project?.title)
+const images = computed(() => props.project?.photos)
+const description = computed(() => props.project?.description)
+const subTitle = computed(() => props.project?.subTitle)
+const techStack = computed(() => props.project?.techStack)
+
 const isDropdown = ref(false)
 const isModal = ref(false)
+
 const handleClick = (e) => {
   if (e.target.className !== "close-button" && e.target.tagName !== "IMG") {
     isDropdown.value = !isDropdown.value
@@ -37,16 +45,6 @@ const handleImageClick = (n) => {
   isModal.value = !isModal.value
   setScrollIndex(n)  
 }
-const title = computed(() => props.project?.title)
-const scrollIndex = ref(0)
-const setScrollIndex = (n) => {
-  scrollIndex.value = n
-}
-const selectedCaption = computed(() => props.project?.photos?.[scrollIndex.value]?.caption)
-const images = computed(() => props.project?.photos)
-const description = computed(() => props.project?.description)
-const subTitle = computed(() => props.project?.subTitle)
-const techStack = computed(() => props.project?.techStack)
 
 </script>
 
