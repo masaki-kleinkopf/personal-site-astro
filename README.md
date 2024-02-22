@@ -1,5 +1,3 @@
-Portfolio built in Astro, Vue, SCSS.
-
-Learning goal was to learn Astro!
+Portfolio built with Astro, Vue, SCSS.
 
 https://masakikleinkopf.com
