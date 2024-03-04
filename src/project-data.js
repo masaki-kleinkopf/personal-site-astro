@@ -1,7 +1,7 @@
 export const projectData = [
   {title: "LiveNation",
   subTitle: 'Bean.LA',
-  description: 'Developer on the Bean team which built a new website for LiveNation. Work included styling for all pages, building responsive custom SCSS for multiple breakpoints, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model and building a tech pack download flow using SendGrid with serverless functions.',
+  description: '<p>Developer on the Bean team which built a new website for LiveNation. Work included styling for all pages, building responsive custom SCSS for multiple breakpoints, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model and building a tech pack download flow using SendGrid with serverless functions.</p>',
   techStack: 'Nuxt3/Vue/TypeScript, Sanity CMS, Node, SCSS',
    photos: [{
     src:'/images/ln-6.webp',
@@ -18,7 +18,7 @@ export const projectData = [
   },
   {title:"Salon94",
   subTitle: 'Bean.LA',
-  description: 'Developed new features for Salon94\'s site refresh and new home page. Work included syncing Shopify data into SanityCMS for more flexibility, building out corresponding Shop features such as a homepage shop carousel, and rebuilding shop and checkout flow utilizing Shopify Storefront API and Pinia state management.',
+  description: '<p>Developed new features for <a href="https://salon94design.com/" target="_blank" >Salon94\'s</a> site refresh and new home page. Work included syncing Shopify data into SanityCMS for more flexibility, building out corresponding Shop features such as a homepage shop carousel, and rebuilding shop and checkout flow utilizing Shopify Storefront API and Pinia state management.</p>',
   techStack: 'Nuxt3/Vue, Sanity CMS, SCSS, Shopify Storefront',
   photos:[
     {src:'/images/s94-1.webp', caption: 'Home page shop carousel, made possible with Shopify/Sanity integration.'},
@@ -31,7 +31,7 @@ export const projectData = [
 },
   {title:'Dublab',
   subTitle: 'Bean.LA',
-  description: 'Developer for Dublab, a continuing Bean client. Migrated Dublab\'s calendar system from WordPress to Google Calendar API, which included creating serverless functions to utilize new data and building a new frontend with modern UI features.',
+  description: '<p>Developer for <a href="https://dublab.com" target="_blank">Dublab</a>, a continuing Bean client. Migrated Dublab\'s calendar system from WordPress to Google Calendar API, which included creating serverless functions to utilize new data and building a new frontend with modern UI features.</p>',
   techStack: 'Vue2, WordPress, SCSS',
   photos:[
     {src:'/images/dublab-1.webp', caption: 'Schedule page'},
@@ -42,7 +42,7 @@ export const projectData = [
 },
   {title:"Community Food Experience",
 subTitle:'ACFB',
-description: 'Took over as developer and maintainer of the Community Food Experience, an interactive simulation that shows the difficulty of living in food insecurity. Worked with Atlanta Community Food Bank staff to help make UI decisions and implement them, such as adding new nutrition information and fixing small bugs that appeared through the endgame process.',
+description: '<p>Took over as developer and maintainer of the Community Food Experience, an interactive simulation that shows the difficulty of living in food insecurity. Worked with Atlanta Community Food Bank staff to help make UI decisions and implement them, such as adding new nutrition information and fixing small bugs that appeared through the endgame process.</p>',
 techStack: 'React, CSS',
 photos:[
   {src:'/images/cfe-5.webp', caption: 'CFE intro page'},
