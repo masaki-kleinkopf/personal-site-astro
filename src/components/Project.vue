@@ -12,7 +12,7 @@
       </button>
     </div>
     <div class='dropdown' :class="isDropdown && 'open'">
-      <p class="description">{{ description }}</p>
+      <span class="description" v-html="description"></span>
       <p class="tech-stack">Tech Stack: {{ techStack }}</p>
       <MasonryGrid :images="images" @image-click="handleImageClick" />
     </div>
@@ -127,6 +127,9 @@ const handleImageClick = (n) => {
   width: 100%;
   padding-bottom: 1rem;
   font-size: 1rem;
+  :deep(a) {
+    text-decoration: underline;
+  }
 }
 
 .tech-stack {
