@@ -21,14 +21,14 @@ export const projectData = [
   description: '<p>Built new features for <a href="https://givehanx.com" target="_blank">Hanx</a>, a coffee brand by Tom Hanks. Work included a new product model, quantity based subscriptions, a gift card recipient form, and new UI features such as a meganav and featured upsell products carousel.</p>',
   techStack: 'Shopify Liquid, Vue, SCSS',
    photos: [{
-    src:'/images/hanx-1.png',
+    src:'/images/hanx-1.webp',
     caption: 'meganav'
   },
-  {src:'/images/hanx-5.png', caption: 'gift card with recipient form'},
-  {src:'/images/hanx-4.png', caption: 'PDP'},
-  {src:'/images/hanx-2.png', caption: 'mobile cart'},
-  {src:'/images/hanx-3.png', caption: 'new products by flavor'},
-  {src:'/images/hanx-6.png', caption: 'mobile PDP subscription selectors'},
+  {src:'/images/hanx-5.webp', caption: 'gift card with recipient form'},
+  {src:'/images/hanx-4.webp', caption: 'PDP'},
+  {src:'/images/hanx-2.webp', caption: 'mobile cart'},
+  {src:'/images/hanx-3.webp', caption: 'new products by flavor'},
+  {src:'/images/hanx-6.webp', caption: 'mobile PDP subscription selectors'},
 ]
   },
   {title:"Salon94",
