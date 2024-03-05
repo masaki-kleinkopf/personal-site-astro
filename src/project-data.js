@@ -1,7 +1,7 @@
 export const projectData = [
-  {title: "LiveNation",
+  {title: "Live Nation",
   subTitle: 'Bean.LA',
-  description: '<p>Developer on the Bean team which built a new website for LiveNation. Work included styling for all pages, building responsive custom SCSS for multiple breakpoints, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model and building a tech pack download flow using SendGrid with serverless functions.</p>',
+  description: '<p>Developer on the Bean team which built a new website for Live Nation. Work included styling for all pages, building responsive custom SCSS for multiple breakpoints, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model and building a tech pack download flow using SendGrid with serverless functions.</p>',
   techStack: 'Nuxt3/Vue/TypeScript, Sanity CMS, Node, SCSS',
    photos: [{
     src:'/images/ln-6.webp',
@@ -14,6 +14,21 @@ export const projectData = [
   {src:'/images/ln-7.webp', caption: 'Mobile lightbox'},
   {src:'/images/ln-8.webp', caption: 'Mobile tech pack download'},
 
+]
+  },
+  {title: "Hanx",
+  subTitle: 'Bean.LA',
+  description: '<p>Built new features for <a href="https://givehanx.com" target="_blank">Hanx</a>, a coffee brand by Tom Hanks. Work included a new product model, quantity based subscriptions, a gift card recipient form, and new UI features such as a meganav and featured upsell products carousel.</p>',
+  techStack: 'Shopify Liquid, Vue, SCSS',
+   photos: [{
+    src:'/images/hanx-1.png',
+    caption: 'meganav'
+  },
+  {src:'/images/hanx-5.png', caption: 'gift card with recipient form'},
+  {src:'/images/hanx-4.png', caption: 'PDP'},
+  {src:'/images/hanx-2.png', caption: 'mobile cart'},
+  {src:'/images/hanx-3.png', caption: 'new products by flavor'},
+  {src:'/images/hanx-6.png', caption: 'mobile PDP subscription selectors'},
 ]
   },
   {title:"Salon94",
