@@ -1,7 +1,7 @@
 <template>
   <div class="masonry-grid">
     <div v-for="(imageData, idx) in images" class="item" :key="idx">
-      <div class="content" @click="$emit('imageClick', idx)">
+      <div class="content">
         <img :src="`${imageData.src}`" :alt="`${imageData.caption}`">
         <p class="caption">{{ imageData.caption }}</p>
       </div>
@@ -9,15 +9,16 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { computed, onMounted } from "vue"
 
-const props = defineProps<{
-  images: any
-}>()
+const props = defineProps({
+  images: Array
+})
+
 const images = computed(() => props.images)
 
-const resizeGridItem = (item:any) => {
+const resizeGridItem = (item) => {
    const grid = document.getElementsByClassName("masonry-grid")[0];
    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
@@ -31,8 +32,6 @@ const resizeAllGridItems = () => {
       resizeGridItem(allItems[i]);
    }
 }
-
-const emit = defineEmits(['imageClick'])
 
 onMounted(() => {
     resizeAllGridItems();
