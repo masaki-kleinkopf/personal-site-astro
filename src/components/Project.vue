@@ -14,7 +14,7 @@
     <div class='dropdown' :class="isDropdown && 'open'">
       <span class="description" v-html="description"></span>
       <p class="tech-stack">Tech Stack: {{ techStack }}</p>
-      <MasonryGrid :images="images" @image-click="handleImageClick" />
+      <MasonryGrid :images="images" />
     </div>
   </div>
 </template>
@@ -34,16 +34,11 @@ const subTitle = computed(() => props.project?.subTitle)
 const techStack = computed(() => props.project?.techStack)
 
 const isDropdown = ref(false)
-const isModal = ref(false)
 
 const handleClick = (e) => {
   if (e.target.className !== "close-button" && e.target.tagName !== "IMG") {
     isDropdown.value = !isDropdown.value
   }
-}
-const handleImageClick = (n) => {
-  isModal.value = !isModal.value
-  setScrollIndex(n)  
 }
 
 </script>
