@@ -19,6 +19,9 @@ import Project from './Project.vue';
 .work-container {
   display: flex;
   flex-direction: column;
+  .section-heading {
+    font-weight: normal;
+  }
   .work-heading {
     font-size: 48px;
     padding-left: 30px;

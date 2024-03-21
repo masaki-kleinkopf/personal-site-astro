@@ -67,6 +67,7 @@ const handleClick = (e) => {
     align-items: center;
     padding-left: 1.25rem;
     font-size: 1.1rem;
+    font-weight: normal;
     @media only screen and (min-width: 600px) {
       font-size: 1.4rem;
 	  }
