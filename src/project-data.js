@@ -1,7 +1,7 @@
 export const projectData = [
   {title: "Live Nation",
   subTitle: 'Bean.LA',
-  description: '<p>Developer on the Bean team which built a new website for Live Nation. Work included styling for all pages, building responsive custom SCSS for multiple breakpoints, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model and building a tech pack download flow using SendGrid with serverless functions.</p>',
+  description: '<p>Developer on the Bean team which built a new website for Live Nation. Work included building UI for all pages, including responsive layout for mobile/tablet/desktop, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model in Sanity CMS and building a tech pack download flow using SendGrid with serverless functions.</p>',
   techStack: 'Nuxt3/Vue/TypeScript, Sanity CMS, Node, SCSS',
    photos: [{
     src:'/images/ln-6.webp',
@@ -18,7 +18,7 @@ export const projectData = [
   },
   {title: "Hanx",
   subTitle: 'Bean.LA',
-  description: '<p>Built new features for <a href="https://givehanx.com" target="_blank">Hanx</a>, a coffee brand by Tom Hanks. Work included a new product model, quantity based subscriptions, a gift card recipient form, and new UI features such as a meganav and featured upsell products carousel.</p>',
+  description: '<p>Built new features for <a href="https://givehanx.com" target="_blank">Hanx</a>, a coffee brand by Tom Hanks. Work included creating a new product model for coffee products, new quantity based subscriptions, a gift card recipient form, and new UI such as a meganav and featured upsell products carousel.</p>',
   techStack: 'Shopify Liquid, Vue, SCSS',
    photos: [{
     src:'/images/hanx-1.webp',
@@ -46,7 +46,7 @@ export const projectData = [
 },
   {title:'Dublab',
   subTitle: 'Bean.LA',
-  description: '<p>Developer for <a href="https://dublab.com" target="_blank">Dublab</a>, a continuing Bean client. Migrated Dublab\'s calendar system from WordPress to Google Calendar API, which included creating serverless functions to utilize new data and building a new frontend with modern UI features.</p>',
+  description: '<p>Developer for <a href="https://dublab.com" target="_blank">Dublab</a>, a continuing Bean client. Migrated Dublab\'s calendar system from WordPress to Google Calendar API, which included creating serverless functions to utilize new data and building a new frontend for the schedule page.</p>',
   techStack: 'Vue2, WordPress, SCSS',
   photos:[
     {src:'/images/dublab-1.webp', caption: 'Schedule page'},
