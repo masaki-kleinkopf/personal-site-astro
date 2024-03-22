@@ -107,6 +107,21 @@ import About from '../components/About.astro'
 	}
 
 	.orange-container{
+		@keyframes rotate {
+			to {
+				transform: rotate(360deg);
+			}
+		}	
+
+		@media (prefers-reduced-motion: no-preference) {
+			@supports (animation-timeline: scroll()) {
+				svg {
+					animation: rotate linear both;
+					animation-timeline: scroll();
+				} 
+			}
+		}
+
 		path {
 			&:hover {
 				fill: var(--accent-orange);;
