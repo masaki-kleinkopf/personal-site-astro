@@ -7,19 +7,19 @@
 </template>
 
 <script setup>
-import {ref, computed} from "vue"
+import { ref, computed } from "vue";
 
-const successText = ref("")
-const classes = computed(() => ['hover-text', successText.value && 'hide'] )
+const successText = ref("");
+const classes = computed(() => ["hover-text", successText.value && "hide"]);
 
 const handleClick = () => {
   navigator.clipboard.writeText("masaki.kleinkopf@gmail.com").then(
-    successText.value="email copied",
+    (successText.value = "email copied"),
     setTimeout(() => {
-      successText.value = ""
+      successText.value = "";
     }, 2000)
-    );
-}
+  );
+};
 </script>
 
 <style lang="scss">
@@ -36,7 +36,7 @@ const handleClick = () => {
     color: var(--accent-orange);
     @media only screen and (min-width: 600px) {
       font-size: 1.2rem;
-	  }
+    }
     font-size: 1rem;
   }
   .success-text {
@@ -47,7 +47,7 @@ const handleClick = () => {
     font-style: italic;
     @media only screen and (min-width: 600px) {
       font-size: 1.2rem;
-	  }
+    }
     font-size: 1rem;
   }
   &:active {
@@ -60,7 +60,7 @@ const handleClick = () => {
     @media only screen and (min-width: 600px) {
       font-size: 1.5rem;
       gap: 2rem;
-	  }
+    }
     font-size: 1.2rem;
   }
 }
