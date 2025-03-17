@@ -1,4 +1,37 @@
 export const projectData = [
+  {
+    title: "Munchkin Redesign",
+    subTitle: 'Munchkin',
+    description: '<p>Frontend Developer on the Munchkin team which built a new Munchkin redesign from the ground-up. Work included building reusable form library components, a new footer with animations, and a new, modular PDP with components such as a masonry grid and Mux powered Video Player with custom custom control bar.</p>',
+    techStack: 'Shopify Hydrogen/Remix/React/TailwindCSS, Wordpress (Headless), Docker',
+    photos: [{
+      src:'/images/mck-2.png',
+      caption: 'Video player with custom controls'
+    },
+    {src:'/images/mck-4.png', caption: 'New Product Hero'},
+    {src:'/images/mck-3.png', caption: 'Benefits & Features masonry grid'},
+    {src:'/images/mck-5.png', caption: 'Footer with animations'},
+    {src:'/images/mck-6.png', caption: 'Landing page'},
+    {src:'/images/mck-1.png', caption: 'FAQ accordion'},
+    ]
+  },
+  {
+    title: "Live Nation",
+    subTitle: 'Bean.LA',
+    description: '<p>Developer on the Bean team which built a new website for Live Nation. Work included building UI for all pages, including responsive layout for mobile/tablet/desktop, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model in Sanity CMS and building a tech pack download flow using SendGrid with serverless functions.</p>',
+    techStack: 'Nuxt3/Vue/TypeScript, Sanity CMS, Node, SCSS',
+    photos: [{
+      src:'/images/ln-6.webp',
+      caption: 'Home page'
+    },
+    {src:'/images/ln-10.webp', caption: 'Lightbox with shareable url'},
+    {src:'/images/ln-5.webp', caption: 'Venue page'},
+    {src:'/images/ln-4.webp', caption: 'Venue page with social media carousel'},
+    {src:'/images/ln-3.webp', caption: 'Gallery grid'},
+    {src:'/images/ln-7.webp', caption: 'Mobile lightbox'},
+    {src:'/images/ln-8.webp', caption: 'Mobile tech pack download'},
+    ]
+  },
   {title: "Live Nation",
   subTitle: 'Bean.LA',
   description: '<p>Developer on the Bean team which built a new website for Live Nation. Work included building UI for all pages, including responsive layout for mobile/tablet/desktop, utilizing Embla carousel for multiple custom carousels, creating a user friendly content-model in Sanity CMS and building a tech pack download flow using SendGrid with serverless functions.</p>',
