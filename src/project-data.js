@@ -3,8 +3,9 @@ export const projectData = [
     title: "Munchkin (US) Redesign",
     subTitle: "Munchkin",
     description:
-      "<p>Frontend Developer on the Munchkin team which built a new Munchkin storefront from the ground-up based on Figma designs. Work included building accessible, responsive UI library components, a new footer with animations, and a modular PDP with components such as a masonry grid and Mux powered video player with custom custom control bar. Utilized Remix's server capabalities for SSR and api routes.</p>",
-    techStack: "Shopify Hydrogen/Remix/React/TailwindCSS, Wordpress (Headless), Docker",
+      "<p>Frontend Developer on the Munchkin team which built a new Munchkin storefront from the ground-up based on Figma designs. Work included building accessible, responsive UI library components, footer animations, and a modular PDP with components such as a masonry grid and Mux powered video player with custom custom control bar. Utilized Remix's server capabalities for SSR and api routes.</p>",
+    techStack:
+      "Shopify Hydrogen/Remix(v2)/React/TailwindCSS, GraphQL, Wordpress (Headless), Docker",
     photos: [
       { src: "/images/mck-3.png", caption: "Benefits & Features masonry grid" },
       { src: "/images/mck-4.png", caption: "New Product Hero" },
@@ -86,7 +87,7 @@ export const projectData = [
     title: "Community Food Experience",
     subTitle: "ACFB",
     description:
-      "<p>Took over as developer and maintainer of the Community Food Experience, an interactive simulation that shows the difficulty of living in food insecurity. Worked with Atlanta Community Food Bank staff to help make UI decisions and implement them, such as adding new nutrition information and fixing small bugs that appeared through the endgame process.</p>",
+      "<p>Developer and maintainer of the Community Food Experience, an interactive simulation that shows the difficulty of living in food insecurity. Worked with Atlanta Community Food Bank staff to help make UI decisions and implement them, such as adding new nutrition information and adding a user friendly pause menu.</p>",
     techStack: "React, CSS",
     photos: [
       { src: "/images/cfe-5.webp", caption: "CFE intro page" },
