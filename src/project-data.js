@@ -3,7 +3,7 @@ export const projectData = [
     title: "Munchkin (US) Redesign",
     subTitle: "Munchkin",
     description:
-      "<p>Frontend Developer on the Munchkin team which built a new Munchkin storefront from the ground-up based on Figma designs. Work included building accessible, responsive UI library components, footer animations, and a modular PDP with components such as a masonry grid and Mux powered video player with custom custom control bar. Utilized Remix's server capabalities for SSR and api routes.</p>",
+      "<p>Frontend Developer on the Munchkin team which built a new headless Hydrogen storefront from the ground-up based on Figma designs. Work included building accessible, responsive UI library components, footer animations, and a modular PDP with components such as a masonry grid and Mux powered video player with custom custom control bar. Utilized Remix's server capabalities for SSR and api routes.</p>",
     techStack:
       "Shopify Hydrogen/Remix(v2)/React/TailwindCSS, GraphQL, Wordpress (Headless), Docker",
     photos: [
