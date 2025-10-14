@@ -49,16 +49,20 @@ onMounted(() => {
   grid-row-gap: 6px;
   grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
   grid-auto-rows: 0px;
+
   img {
     border-radius: 1rem;
     width: 100%;
   }
+
   @media only screen and (min-width: 600px) {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
+
   @media only screen and (min-width: 825px) {
     grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
   }
+  
   .caption {
     font-size: 0.9rem;
     font-style: italic;

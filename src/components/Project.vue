@@ -64,42 +64,51 @@ const handleClick = (e) => {
 <style lang="scss" scoped>
 .project-container {
   border-top: solid 1px;
+
   &:last-child {
     border-bottom: solid 1px;
   }
 }
+
 .image {
   height: 200px;
   width: 370px;
 }
+
 .project-preview {
   display: flex;
   justify-content: space-between;
   height: 5rem;
   cursor: pointer;
+
   @media only screen and (min-width: 600px) {
     height: 6.2rem;
   }
+
   .title {
     display: flex;
     align-items: center;
     padding-left: 1.25rem;
     font-size: 1.1rem;
     font-weight: normal;
+
     @media only screen and (min-width: 600px) {
       font-size: 1.4rem;
     }
+
     span {
       font-size: 1rem;
       padding-left: 1rem;
       font-style: italic;
       padding-right: 0.1rem;
+
       @media only screen and (min-width: 600px) {
         font-size: 1.2rem;
       }
     }
   }
 }
+
 .dropdown {
   max-height: 0;
   opacity: 0;
@@ -108,15 +117,18 @@ const handleClick = (e) => {
   flex-direction: column;
   padding: 0 1rem;
   overflow: hidden;
+
   @media only screen and (min-width: 600px) {
     padding: 0 3rem;
   }
 }
+
 .open {
   max-height: 8000px;
   opacity: 100;
   transition: opacity 1.5s ease-in-out;
 }
+
 .dropdown-button {
   transform: rotate(0deg);
   transition: transform 0.25s linear;
@@ -125,6 +137,7 @@ const handleClick = (e) => {
   display: flex;
   align-items: center;
   overflow: hidden;
+
   svg {
     height: 25px;
     @media only screen and (min-width: 600px) {
@@ -132,11 +145,13 @@ const handleClick = (e) => {
     }
   }
 }
+
 .arrow-open {
   transform: rotate(90deg);
   transition: transform 0.25s linear;
   max-height: 70px;
 }
+
 .description {
   width: 100%;
   padding-bottom: 1rem;
